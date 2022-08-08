@@ -1,10 +1,7 @@
 package br.com.dio.desafio.dominio;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class Bootcamp {
     private String nome;
@@ -12,7 +9,7 @@ public class Bootcamp {
     private final LocalDate dataInicial = LocalDate.now();
     private final LocalDate dataFinal = dataInicial.plusDays(45);
     private Set<Dev> devsInscritos = new HashSet<>();
-    private Set<Dev> conteudos = new LinkedHashSet<>();
+    private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
     @Override
     public boolean equals(Object o) {
@@ -59,11 +56,11 @@ public class Bootcamp {
         this.devsInscritos = devsInscritos;
     }
 
-    public Set<Dev> getConteudos() {
-        return conteudos;
-    }
+    public Set<Conteudo> getConteudos() {   return conteudos;  }
 
-    public void setConteudos(Set<Dev> conteudos) {
+    public void setConteudos(Set<Conteudo> conteudos) {
         this.conteudos = conteudos;
     }
+
+
 }
